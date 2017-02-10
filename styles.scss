@@ -1,0 +1,100 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+$navbar-height: 80px;
+$primary: #16a085;
+$secondary: #ecf0f1;
+$sidebar-color: #2ecc71;
+$text: #fff;
+
+* { box-sizing: border-box; }
+
+body {
+  background-color: $secondary;
+  font-family: 'Lato';
+}
+#navbar {
+  //height: $navbar-height;
+  background-color: $primary;
+  color: $text;
+}
+
+.main-title {
+  font-size: 30px;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.nav-options {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 10px;
+  
+  li {
+    font-size: 20px;
+    margin-right: 20px;
+    padding: 10px;
+    cursor: pointer;
+    &:last-child {
+      margin-right: 0;
+    }
+    
+    &:hover {
+      background-color: $sidebar-color;
+    }
+  }
+}
+
+#content {
+  display: flex;
+}
+
+#articles {
+  flex: 4;
+  padding: 20px;
+}
+
+#sidebar {
+  flex: 1;
+  background-color: $sidebar-color;
+  color: $text;
+  height: 100%;
+}
+
+.card {
+  height: 300px;
+  width: 100%;
+  background-color: $text;
+  margin-bottom: 20px;
+  position: relative;
+  
+  h2 {
+    background-color: $primary;
+    color: $text;
+    font-size: 20px;
+    padding: 10px 0 10px 10px;
+  }
+  
+  .summary {
+    padding: 10px 0 10px 10px;
+    font-size: 16px;
+    color: $primary;
+  }
+  
+  .button {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $primary;
+    padding: 15px;
+    width: 20%;
+    text-align: center;
+    cursor: pointer;
+    color: $text;
+    &:hover {
+      background-color: $sidebar-color;
+    }
+  }
+  
+}
